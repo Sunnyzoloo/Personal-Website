@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website Using HTML & CSS | Codehal</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Portfolio.</a>
+        <ul>
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#" id="about-link">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+<section class="home" id="home">
+    <div class="home-info">
+        <h1>Zoljargal Enkhbayar</h1>
+        <h2>Aspiring Software Engineer</h2>
+        <p>Computer Science student in Senior year looking for Software Engineering summer intern 2025 as a first internship.</p>
+        <div class="btn-sci">
+            <a href="#" id="downloadresume" class="btn">Download Resume</a>
+            <div class="sci">
+                <a href="#" id="githubLink"><i class='bx bxl-github'></i></a>
+                <a href="#" id="linkedinLink"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="home-img">
+        <div class="img-box">
+            <div class="img-item">
+                <img src="/Users/15716/Desktop/home.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about" id="about">
+    <div class="about-info">
+        <h2>About Me</h2>
+        <p>I am a passionate Computer Science student with a strong interest in software engineering and problem-solving. Currently in my senior year, I maintain a 3.38 GPA while honing my skills in various programming languages and development practices. I am actively seeking opportunities for a summer internship in 2025 to apply my skills in a real-world environment.</p>
+    </div>
+</section>
+<section class="skills" id="skills">
+    <div class="skills-info">
+        <h2>My Skills</h2>
+        <p>Here are some of the skills I've acquired during my studies and personal projects:</p>
+        <div class="skills-list">
+            <div class="skill">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                    <li>HTML/CSS</li>
+                    <li>R</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+            <div class="skill">
+                <h3>Frameworks & Libraries</h3>
+                <ul>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Flask</li>
+                    <li>Django</li>
+                </ul>
+            </div>
+            <div class="skill">
+                <h3>Tools</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>VS Code</li>
+                    <li>Docker</li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="education" id="education">
+    <div class="education-info">
+        <h2>Education</h2>
+        <p>I am currently in my senior year as a Computer Science student. Here’s a quick overview of my academic background:</p>
+        <div class="education-list">
+            <div class="education-item">
+                <h3>Saint Cloud State University, Saint Cloud, MN</h3>
+                <p>Bachelor of Science in Computer Science (Expected Graduation: May,2026)</p>
+                <p>Relevant Courses: Data Structures, Algorithms, Web Development, Database Systems, Software Engineering</p>
+            </div>
+            <div class="education-item">
+                <h3>MIU Secondary School, Ulaanbaatar, Mongolia</h3>
+                <p>High School Diploma (Graduated: June,2021)</p>
+                <p>Achievements: Graduated with Honors (97% A)</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <div class="contact-info">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch with me, feel free to reach out through the form below or directly via email or LinkedIn.</p>
+        
+        <div class="contact-methods">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>sunnyzolo22@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/zoljargal-enkhbayar-45572a337/?trk=opento_sprofile_details" target="_blank">View my LinkedIn</a></p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+    </div>
+
+</section>
+
+</body>
+<script>
+    document.getElementById("downloadresume").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default action
+    alert("Downloading CV...");
+    window.location.href = "https://docs.google.com/document/d/16r15Lrh24Ic7SDC04niFlz-8qcYw8W_qsIZsw9vW75M/edit?tab=t.0";
+});
+
+document.getElementById("githubLink").addEventListener("click", function(event) {
+    event.preventDefault();
+    // Open GitHub profile in a new tab
+    window.open("https://github.com/Sunnyzoloo", "_blank");
+});
+
+document.getElementById("linkedinLink").addEventListener("click", function(event) {
+    event.preventDefault();
+    // Open LinkedIn profile in a new tab
+    window.open("https://www.linkedin.com/in/zoljargal-enkhbayar-45572a337/?trk=opento_sprofile_details", "_blank");
+});
+
+// Handle navigation clicks
+document.querySelectorAll(".navbar ul li a").forEach(link => {
+    link.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Remove active class from all navbar links
+        document.querySelectorAll(".navbar ul li a").forEach(link => {
+            link.classList.remove("active");
+        });
+
+        // Add active class to the clicked link
+        this.classList.add("active");
+
+        // Hide all sections
+        document.querySelectorAll("section").forEach(section => {
+            section.classList.remove("active"); // Hide sections
+        });
+
+        // Show the corresponding section
+        const targetSection = document.querySelector(this.getAttribute("href"));
+        if (targetSection) {
+            targetSection.classList.add("active"); // Show selected section
+        }
+
+        // Smooth scroll to the selected section
+        window.scrollTo({
+            top: targetSection.offsetTop,
+            behavior: "smooth"
+        });
+    });
+});
+
+// Handle "About" section display (Optional: Avoid inline style manipulation)
+document.getElementById("about-link").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default action of the link
+
+    // Show the About section by adding the 'active' class
+    document.getElementById("about").classList.add("active");
+
+    // Smooth scroll to the About section
+    window.scrollTo({ top: document.getElementById("about").offsetTop, behavior: "smooth" });
+});
+
+// Ensure Home is shown by default when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+    // Make sure the Home section is active
+    document.getElementById("home").classList.add("active");
+    
+    // Highlight the Home link
+    document.querySelectorAll(".navbar ul li a").forEach(link => {
+        if (link.getAttribute("href") === "#home") {
+            link.classList.add("active");
+        }
+    });
+});
+
+// Handle navigation clicks
+document.querySelectorAll(".navbar ul li a").forEach(link => {
+    link.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Remove active class from all navbar links
+        document.querySelectorAll(".navbar ul li a").forEach(link => {
+            link.classList.remove("active");
+        });
+
+        // Add active class to the clicked link
+        this.classList.add("active");
+
+        // Hide all sections except Home
+        document.querySelectorAll("section").forEach(section => {
+            if (section.id !== "home") {
+                section.classList.remove("active");
+            }
+        });
+
+        // Show the corresponding section
+        const targetSection = document.querySelector(this.getAttribute("href"));
+        if (targetSection) {
+            targetSection.classList.add("active");
+        }
+
+        // Smooth scroll to the selected section
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: "smooth"
+            });
+        }
+    });
+});
+document.getElementById("about-link").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default action of the link
+
+    // Hide all sections
+    document.querySelectorAll("section").forEach(section => {
+        section.classList.remove("active");
+    });
+
+    // Show the About section by adding the 'active' class
+    document.getElementById("about").classList.add("active");
+
+    // Smooth scroll to the About section
+    window.scrollTo({ top: document.getElementById("about").offsetTop, behavior: "smooth" });
+});
+
+
+</script>
+
+</html>

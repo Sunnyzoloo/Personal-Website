@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #1f242d;
+
+
+}
+a{
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+.navbar ul{
+    display: flex;
+
+}
+
+.navbar ul li{
+    list-style: none;
+    margin-left: 35px;
+    transition: .5s;
+}
+
+.navbar ul li a{
+    font-size: 20px;
+    font-weight: 500;
+}
+.navbar ul li a:hover a,
+.navbar ul li a.active a{
+    color: #7cf03d;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+}
+
+.home-info h1 {
+    font-size: 55px;
+}
+.home-info h2 {
+    font-size: 25px;
+    margin-top: -10px;
+
+}
+.home-info .btn-sci {
+    display: flex;
+    align-items: center;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: blue;
+    border: 2x solid blue;
+    border-radius: 40px;
+    box-shadow: 0 0 10px blue;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    transition: .5s;
+
+}
+
+.btn:hover {
+    background: transparent;
+    color: black;
+    box-shadow: none;
+}
+.home-info .btn-sci .sci{
+    margin-left: 20px;
+}
+.home-info .btn-sci .sci a{
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid blue;
+    border-radius: 50%;
+    font-size: 20px;
+    color: blue;
+    margin: 0 8px;
+    transition: .5s;
+}
+
+.home-info .btn-sci .sci a:hover{
+    background: blue;
+    color: #1f242d;
+    box-shadow: 0 0 10px;
+}
+.home-img .img-box{
+    width: 32vw;
+    height: 32vw;
+    background: blue;
+    border-radius: 50%;
+
+}
+.home-img .img-box .img-item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: black;
+    border-radius: 50%;
+}
+.home-img .img-box .img-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the image fill the entire blue box */
+    height: 100%; /* Match the height of the blue box */
+    object-fit: cover; /* Ensures the image scales proportionally and covers the box */
+    border-radius: 50%; /* Maintains the circular shape */
+}
+
+
+.about {
+    display: none; /* Hide the section by default */
+    padding: 50px 9%;
+    background: #2c313a;
+    color: #fff;
+    text-align: center;
+}
+section.active {
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 30px 5%;
+    }
+}
+.skills {
+    background-color: #2d3a47;  /* Dark background color */
+    color: #fff;
+    padding: 60px 9%;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.skills-info p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: 30%;
+    margin-bottom: 40px;
+}
+
+.skill h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.skill ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill ul li {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 80%;
+    }
+}
+/* Hide all sections by default */
+section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Optional: smooth transition when sections are shown/hidden */
+}
+
+/* Show the section with the 'active' class */
+section.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Ensure the home section retains its layout when clicked again */
+#home.active {
+    display: flex; /* Reapply the flex display to home section */
+    height: 100vh; /* Ensure the height remains as 100vh */
+    padding: 60px 9% 0;
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+.education {
+    display: none; /* Hide by default */
+    padding: 60px 9%;
+    background: #2d3a47;
+    color: #fff;
+    text-align: center;
+}
+
+.education h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.education-info p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.education-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.education-item {
+    width: 45%;
+    margin-bottom: 30px;
+    background: #3b4750;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.education-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.education-item p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .education-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+.contact {
+    display: none; /* Hide by default */
+    padding: 60px 9%;
+    background: #2d3a47;
+    color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    width: 45%;
+    margin-bottom: 30px;
+    background: #3b4750;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.contact-form {
+    background: #3b4750;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #7cf03d;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background: #6bb936;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .contact-methods {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        width: 80%;
+    }
+}
+/* Active link styles */
+.navbar ul li a.active {
+    color: #7cf03d;  /* Highlight the active link */
+    font-weight: bold;  /* Make the active link stand out */
+}
+
+.navbar ul li a:hover {
+    color: #7cf03d; /* Highlight on hover */
+}
+
+/* Optional: Ensure Home section doesn't overlap other sections */
+section {
+    padding-top: 60px;
+}
+/* Make sure the Home section is always visible */
+#home {
+    display: flex; /* Ensure Home is displayed by default */
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+    align-items: center;
+    gap: 50px;
+}
+
+section {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
+}
+section.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, visibility 0s 0s;
+}
+
+
+/* Make sure the Home section remains visible when clicked again */
+#home.active {
+    display: flex;
+    height: 100vh;
+    padding: 60px 9% 0;
+}
+
+/* Ensure other sections are hidden by default */
+.about, .skills, .education, .contact {
+    display: none;
+}
